@@ -1,0 +1,991 @@
+/*!
+Theme Name: ABC Widgets
+Theme URI: http://underscores.me/
+Author: Jack
+Author URI: http://underscores.me/
+Description: Theme for ABC Widgets
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: abc-widgets
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+ABC Widgets is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+body {
+	background: #fff;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em -1em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+
+
+/* Short descrition text on store items*/
+.product-meta{
+	font-family: 'Nunito', sans-serif;
+	font-weight: 600;
+	font-size: .8em;
+	color: #000;
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Links (in posts)
+--------------------------------------------------------------*/
+a {
+	color: #000;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #191970;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main
+.posts-navigation,
+.site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear::before,
+.clear::after,
+.entry-content::before,
+.entry-content::after,
+.comment-content::before,
+.comment-content::after,
+.site-header::before,
+.site-header::after,
+.site-content::before,
+.site-content::after,
+.site-footer::before,
+.site-footer::after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear::after,
+.entry-content::after,
+.comment-content::after,
+.site-header::after,
+.site-content::after,
+.site-footer::after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*Banner Style*/
+.banner-container {
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+@media only screen and (min-width: 2400px) {
+	.banner-container {
+		height: 150px;
+	}
+}
+.banner-image {
+	display: block;
+  	max-width:3500px;
+ 	max-height:150px;
+  	width: auto;
+  	height: auto;
+	/*width: 100%;*/
+	/*max-height: 100%;*/
+	width: auto;
+	height: 100%;
+}
+/*Banner text positing*/
+.text-centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Nunito', sans-serif;
+	font-weight: 600;
+	font-size: 1.3em;
+	color: #000;
+	letter-spacing: 0.2em;
+}
+/* Fit banner text on smaller screens*/
+@media only screen and (max-width: 1000px)  {
+	.text-centered {
+		font-size: 1em;
+		top: 40%;
+	}
+	.banner-container {
+		height: 80px;
+	}
+}
+
+.entry-title {
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.4em;
+	margin-left: 5vw;
+
+}
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/*--About Page--*/
+#post-26 h1 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-size: 1.4em;
+	color: #000;
+	padding: 0.5em;
+	padding-left: 20%;
+}
+/*About page text align contents center*/
+.about-text {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 500;
+	font-size: 1.2em;
+	color: #000;
+	padding: 0.5em;
+	padding-left: 25%;
+	width: 75%;
+}
+/*About page image, set max size and align contents center*/
+.cat-image-about img {
+	padding-left: 40%;
+	max-height: 250px;
+}
+/*--Contact Page--*/
+#post-117 h1 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-size: 1.4em;
+	color: #000;
+	padding: 0.5em;
+	padding-left: 20%;
+}
+/*Contact page text align contents center*/
+.contact-text {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 500;
+	font-size: 1.2em;
+	color: #000;
+	padding: 0.5em;
+	padding-left: 25%;
+	width: 75%;
+}
+/*Contact page form*/
+#wpforms-form-127 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-size: 1.2em;
+	color: #000;
+	padding: 0.5em;
+	padding-left: 25%;
+	width: 75%;
+}
+#wpforms-form-127 input {
+	border-width: 1px;
+	border-color: black;
+}
+
+#wpforms-127-field_2 {
+	border-width: 1px;
+	border-color: black;
+}
+
+#wpforms-form-127 .wpforms-submit {
+	background-color: green;
+	color: white;
+	letter-spacing: 2px;
+}
+/* Adding background colour on focus to input fields*/
+#wpforms-127-field_2:focus {
+	background-color: rgba(91, 237, 18, 0.45);
+}
+#wpforms-form-127 input:focus {
+	background-color: rgba(91, 237, 18, 0.45);
+}
+
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	/*margin: 1.5em 0 0;*/
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+/*--------------------------------------------------------------
+## Starter Styles
+--------------------------------------------------------------*/
+
+/* page */
+body, footer.site-footer {
+	/*background: #111;*/
+	background: white;
+
+}
+#page {
+	background: #fff;
+}
+
+
+/* header */
+header.site-header {
+	/*background: #008DBA;*/
+	background: rgba(0, 138, 184, 0.86);
+	padding: 5px;
+	text-align: center;
+}
+@media screen and (min-width: 48em){
+	header.site-header {
+		text-align: left;
+	}
+}
+
+
+.site-branding {
+	width: 400px;
+	margin: 4px auto 0;
+	display: inline-block;
+}
+
+.site-branding img,
+.site-branding p,
+.site-branding h1 {
+	display: block;
+	width: 100%;
+	height: auto;
+
+}
+
+/*Override pure min style for header title*/
+.site-title a{
+	font-family: 'Nunito', sans-serif;
+	font-weight: 900;
+	color: #000;
+	text-decoration: none;
+	font-size: 2em;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 1px #dcd9d2;
+}
+
+@media screen and (min-width: 48em){
+	.site-branding {
+		width: 300px;
+		float: left;
+	}
+}
+
+/* Intro text on home page*/
+.intro-text {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-size: 1.2em;
+	color: #000;
+	/*padding: 0.5em;*/
+	padding-left: 25%;
+	
+}
+
+/*Homepage product display styles*/
+.topseller-banner{
+	font-family: 'Nunito', sans-serif;
+}
+
+/*---------------*/
+.homepage-feature {
+	padding-left: 25%;
+}
+
+
+@media only screen and (max-width: 1200px){
+	.homepage-feature {
+		padding-left: 0;
+		font-size: 0.8em;
+	}
+	.intro-text {
+		padding-left: 0;
+		font-size: 1em;
+	}
+}
+/* Homepage featured items*/
+.item-grid {
+	padding: 4px;
+	width: 300px; 
+	float:left; 
+	height:370px;
+	margin:10px;
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+}
+.item-grid ul {
+	height: 50px;
+}
+.item-grid h2{
+	height: 30px;
+}
+/*Featured items view item button*/
+.item-grid button { 
+	 background-color: #f5f749 ;
+	 font-family: sans-serif;
+}
+#price {
+  color: black;
+  font-size: 22px;
+}
+
+#homepage-feature button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+#homepage-feature button:hover {
+  opacity: 0.7;
+}
+
+#homepage-feature, h2, a {
+	font-size: 14px;
+	text-decoration: none;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+}
+#p-image{
+	max-height: 150px;
+	width: auto;
+}
+
+
+/* navigation */
+nav.main-navigation {
+	float: none;
+	text-align: center;
+}
+@media screen and (max-width: 37.5em){
+	nav.main-navigation button {
+		display: inline-block;
+	}
+}
+
+nav.main-navigation li {
+	display: block;
+	float: none;
+	border-bottom: 1px solid #ddd;
+}
+
+nav.main-navigation li:last-child {
+	margin-right: 0;
+}
+
+nav.main-navigation li a {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-size: 1.2em;
+	color: #000;
+	display: block;
+	padding: 0.2em;
+	letter-spacing: 1px;
+}
+
+nav.main-navigation li a:hover {
+	color: white;
+}
+
+nav.main-navigation li.current_page_item a {
+	font-weight: bold;
+	color: #000;
+}
+
+@media screen and (min-width: 37.5em){
+	nav.main-navigation {
+
+	}
+
+	nav.main-navigation li {
+		margin: 0 1.2em;
+		float: none;
+		display: inline-block;
+		border-bottom: none;
+	}
+}
+
+@media screen and (min-width: 48em){
+	nav.main-navigation {
+		text-align: left;
+		float: right;
+		width: auto;
+		clear: none;
+		margin-top: 1em;
+
+	}
+}
+
+/* Shop Sidebar*/
+/* Poor workaround to get it to display next to shop items*/
+
+#secondary {
+	float: left;
+	position: absolute; 
+	position: fixed;
+	top: 20%;
+	margin-left: 5vw;
+}
+
+/* site content */
+.site-content {
+	/*padding: 1em;*/
+}
+
+/* content area */
+
+#primary, #secondary {
+	padding: 1em;
+}
+
+/* sidebar */
+
+.widget-area .widget-title {
+	font-size: 1.1em;
+}
+
+.widget-area ul {
+	margin-left: 1em;
+	padding-left: 0;
+}
+
+
+
+/* footer */
+footer.site-footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	/*padding: 3em;*/
+	
+	width: 100%;
+	text-align: center;
+	color: #666;
+
+	font-size: 0.8em;
+
+}
+
+footer.site-footer a {
+	color: #666;
+}

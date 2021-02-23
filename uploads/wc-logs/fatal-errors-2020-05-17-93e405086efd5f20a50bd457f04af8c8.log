@@ -1,0 +1,2 @@
+2020-05-17T05:09:16+00:00 CRITICAL syntax error, unexpected ''$'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/ubuntu/environment/wp-content/themes/abc-widgets/homepage.php on line 70
+

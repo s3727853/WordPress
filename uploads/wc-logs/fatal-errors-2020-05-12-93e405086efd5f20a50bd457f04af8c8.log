@@ -1,0 +1,66 @@
+2020-05-12T22:57:09+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:73) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 73
+
+2020-05-12T22:57:28+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:73) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 73
+
+2020-05-12T22:57:40+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:73) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 73
+
+2020-05-12T22:57:43+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:73) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 73
+
+2020-05-12T22:57:47+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:73) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 73
+
+2020-05-12T23:08:29+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:71) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 71
+
+2020-05-12T23:09:09+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:71) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 71
+
+2020-05-12T23:10:31+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:71) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 71
+
+2020-05-12T23:10:43+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:71) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 71
+
+2020-05-12T23:10:54+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:71) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 71
+
+2020-05-12T23:14:54+00:00 CRITICAL Uncaught Error: Call to a member function has_weight() on null in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:31
+Stack trace:
+#0 /home/ubuntu/environment/wp-includes/class-wp-hook.php(287): display_weight('')
+#1 /home/ubuntu/environment/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/ubuntu/environment/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php(77): do_action('woocommerce_aft...')
+#4 /home/ubuntu/environment/wp-includes/template.php(725): require('/home/ubuntu/en...')
+#5 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/wc-core-functions.php(197): load_template('/home/ubuntu/en...', false)
+#6 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/shortcod in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 31
+
+2020-05-12T23:16:50+00:00 CRITICAL Uncaught Error: Call to a member function has_weight() on null in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:31
+Stack trace:
+#0 /home/ubuntu/environment/wp-includes/class-wp-hook.php(287): display_weight('')
+#1 /home/ubuntu/environment/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/ubuntu/environment/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php(83): do_action('woocommerce_aft...')
+#4 /home/ubuntu/environment/wp-includes/template.php(725): require('/home/ubuntu/en...')
+#5 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/wc-core-functions.php(197): load_template('/home/ubuntu/en...', false)
+#6 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/shortcod in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 31
+
+2020-05-12T23:17:17+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:37) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 37
+
+2020-05-12T23:20:10+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:38) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 38
+
+2020-05-12T23:20:21+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:38) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 38
+
+2020-05-12T23:20:58+00:00 CRITICAL Cannot redeclare display_weight() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:30) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 30
+
+2020-05-12T23:24:43+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:38) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 38
+
+2020-05-12T23:25:49+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:38) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 38
+
+2020-05-12T23:26:25+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:76) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 76
+
+2020-05-12T23:26:44+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:82) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 82
+
+2020-05-12T23:27:14+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:46) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 46
+
+2020-05-12T23:35:08+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:46) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 46
+
+2020-05-12T23:38:10+00:00 CRITICAL Cannot redeclare display_sku() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:46) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 46
+
+2020-05-12T23:39:05+00:00 CRITICAL Cannot redeclare skyverge_shop_display_skus() (previously declared in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php:40) in /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php on line 40
+

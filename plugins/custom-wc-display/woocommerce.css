@@ -1,0 +1,69 @@
+/* Overides for custom woocommerce layout
+*/
+.woocommerce .products ul,.woocommerce ul.products {
+    padding: 0;
+    list-style: none outside;
+    clear: both}
+    
+/* add padding to sides of store page and store title + sorting box*/
+.woocommerce ul.products{
+    margin-left: 15vw;
+    margin-right: 5vw;
+} 
+
+.woocommerce .woocommerce-result-count {
+    margin-left: 5vw;
+}   
+
+.woocommerce .woocommerce-ordering {
+    margin-right: 5vw;
+}
+/*Single product view*/
+.woocommerce .single-product {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+/*Woocommerce Shopping cart area formatting */
+.woocommerce thead, .cart-collaterals, .shop_table, .cart_item {
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+.woocommerce .woocommerce-notices-wrapper, .woocommerce .cart-empty {
+    padding-left: 5vw;
+	padding-right: 5vw;
+}
+#customer_details, #order_review_heading  {
+    padding-left: 5vw;
+	padding-right: 5vw;
+}
+/*Checkout Button*/
+a.button.alt, button.button.alt, input.button.alt, #respond input#submit.alt {
+	background: #f5f749 !important;
+	letter-spacing: 2px;
+	color: black !important;
+}
+/*Shop Item Price*/
+.woocommerce ul.products li.product .price {
+    color: red !important;
+    font-weight: 800 !important;
+}
+/*Add to cart button*/
+.woocommerce a.button {
+    background-color: #f5f749 !important;
+    color: black !important;
+}
+/*Form Fields*/
+.woocommerce form input {
+    border-width: 2px;
+}
+.woocommerce .related ul {
+    margin-left: 0 !important;
+}
+/*Price text*/
+.woocommerce div.product p.price,.woocommerce div.product span.price {
+    color: red;
+    font-size: 1.25em}
+
+ 
+ 

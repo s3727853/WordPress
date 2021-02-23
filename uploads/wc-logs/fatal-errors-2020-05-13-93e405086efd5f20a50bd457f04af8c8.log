@@ -1,0 +1,33 @@
+2020-05-13T00:58:30+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::has_short_description() in /home/ubuntu/environment/wp-content/plugins/custom-wc-display/add-shop-loop.php:20
+Stack trace:
+#0 /home/ubuntu/environment/wp-includes/class-wp-hook.php(287): display_shortdescription('')
+#1 /home/ubuntu/environment/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/ubuntu/environment/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php(70): do_action('woocommerce_aft...')
+#4 /home/ubuntu/environment/wp-includes/template.php(725): require('/home/ubuntu/en...')
+#5 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/wc-core-functions.php(197): load_template('/home/ubuntu/en...', false)
+#6 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /home/ubuntu/environment/wp-content/plugins/wooc in /home/ubuntu/environment/wp-content/plugins/custom-wc-display/add-shop-loop.php on line 20
+
+2020-05-13T00:58:35+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::has_short_description() in /home/ubuntu/environment/wp-content/plugins/custom-wc-display/add-shop-loop.php:20
+Stack trace:
+#0 /home/ubuntu/environment/wp-includes/class-wp-hook.php(287): display_shortdescription('')
+#1 /home/ubuntu/environment/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/ubuntu/environment/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php(70): do_action('woocommerce_aft...')
+#4 /home/ubuntu/environment/wp-includes/template.php(725): require('/home/ubuntu/en...')
+#5 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/wc-core-functions.php(197): load_template('/home/ubuntu/en...', false)
+#6 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /home/ubuntu/environment/wp-content/plugins/wooc in /home/ubuntu/environment/wp-content/plugins/custom-wc-display/add-shop-loop.php on line 20
+
+2020-05-13T01:00:57+00:00 CRITICAL Uncaught Error: Call to a member function get_short_description() on null in /home/ubuntu/environment/wp-content/plugins/custom-wc-display/add-shop-loop.php:21
+Stack trace:
+#0 /home/ubuntu/environment/wp-includes/class-wp-hook.php(287): display_shortdescription('')
+#1 /home/ubuntu/environment/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/ubuntu/environment/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/ubuntu/environment/wp-content/plugins/woocommerce/templates/content-product.php(70): do_action('woocommerce_aft...')
+#4 /home/ubuntu/environment/wp-includes/template.php(725): require('/home/ubuntu/en...')
+#5 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/wc-core-functions.php(197): load_template('/home/ubuntu/en...', false)
+#6 /home/ubuntu/environment/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /home/ubuntu/environment/wp-content/plugins/woocommerce/in in /home/ubuntu/environment/wp-content/plugins/custom-wc-display/add-shop-loop.php on line 21
+
